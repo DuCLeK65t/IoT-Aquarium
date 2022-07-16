@@ -142,6 +142,8 @@ void setup()
   dht.setup(DHTpin, DHTesp::DHT11); // for DHT11 Connect DHT sensor to GPIO 17
   // dht.setup(DHTpin, DHTesp::DHT22); //for DHT22 Connect DHT sensor to GPIO 17
 
+  pinMode(ledPin, OUTPUT);
+
   initWiFi();         // Initialize WiFi
   initSPIFFS();       // Initialize SPIFFS
   webServerRootURL();
