@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- CONTAINER FOR CHART -->
+    <div id="monitor-chart"></div>
+    <script src="https://www.gstatic.com/charts/loader.js"></script>
+    <script>
+        google.charts.load('current', {
+            callback: function () {
+                var chart = new google.visualization.LineChart(document.getElementById('monitor-chart'));
+
+                var options = {
+                    'title': 'Temperature and Humidity',
+                    animation: {
+                        duration: 500,
+                        easing: 'out',
+                        startup: true
+                    },
+                    hAxis: {
+                        title: 'Time'
+                    },
+                    vAxis: {
+                        title: 'Parameter'
+                    },
+                    width: 1500,
+                    height: 500
+                };
+
+                var data = new google.visualization.DataTable();
+                data.addColumn('datetime', 'Time');
+                data.addColumn('number', 'Temperature (°C)');
+                data.addColumn('number', 'Humidity (%)');
+
+                var formatDate = new google.visualization.DateFormat({ pattern: 'hh:mm:ss' });
+                var formatNumber = new google.visualization.NumberFormat({ pattern: '#,##0.0' });
+
+                getTemp();
+                setInterval(getTemp, 2000);
+                function getTemp() {
+                    var temperature = (Math.random() * (35 - 30) + 30);
+                    var humidity = (Math.random() * (40 - 15) + 15);
+                    var timestamp = new Date();
+                    drawChart(timestamp, temperature, humidity);
+                }
+
+                function drawChart(timestamp, temperature, humidity) {
+                    data.addRow([timestamp, temperature, humidity]);
+
+                    formatDate.format(data, 0);
+                    formatNumber.format(data, 1);
+                    formatNumber.format(data, 2);
+
+                    chart.draw(data, options);
+                }
+            },
+            packages: ['corechart']
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!-- Complete project details: https://randomnerdtutorials.com/esp32-plot-readings-charts-multiple/ -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ESP32 Web Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+
+<body>
+  <div class="topnav">
+    <h1>IoT Aquarium</h1>
+  </div>
+  <div class="content">
+    <div class="card-grid">
+      <div class="card">
+        <p class="card-title">Temperature Chart</p>
+        <div id="chart-temperature" class="chart-container"></div>
+      </div>
+    </div>
+    <p>GPIO state: <strong> %STATE%</strong></p>
+    <p><a href="/on"><button class="button">ON</button></a></p>
+    <p><a href="/off"><button class="button button2">OFF</button></a></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>

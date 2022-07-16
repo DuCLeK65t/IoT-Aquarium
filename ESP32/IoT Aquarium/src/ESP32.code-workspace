@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"path": "..\\.."
+		},
+		{
+			"name": "IoT Aquarium",
+			"path": ".."
+		},
+		{
+			"name": "Test",
+			"path": "C:\\Users\\llduc\\Desktop\\Test"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "IoT Aquarium"
+	}
+}
