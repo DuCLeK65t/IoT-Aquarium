@@ -1,5 +1,3 @@
-// Complete project details: https://randomnerdtutorials.com/esp32-plot-readings-charts-multiple/
-
 // Get current sensor readings when the page loads
 window.addEventListener('load', getReadings);
 
@@ -29,26 +27,6 @@ var chartT = new Highcharts.Chart({
         fillColor: '#1B7CED',
       }
     },
-    // {
-    //   name: 'Temperature #3',
-    //   type: 'line',
-    //   color: '#8B2635',
-    //   marker: {
-    //     symbol: 'triangle',
-    //     radius: 3,
-    //     fillColor: '#8B2635',
-    //   }
-    // },
-    // {
-    //   name: 'Temperature #4',
-    //   type: 'line',
-    //   color: '#71B48D',
-    //   marker: {
-    //     symbol: 'triangle-down',
-    //     radius: 3,
-    //     fillColor: '#71B48D',
-    //   }
-    // },
   ],
   title: {
     text: undefined

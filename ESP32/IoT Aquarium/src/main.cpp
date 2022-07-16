@@ -41,7 +41,6 @@ String getSensorReadings()
   return jsonString;
 }
 
-// Initialize WiFi
 void initWiFi()
 {
   WiFi.mode(WIFI_STA);
@@ -58,7 +57,6 @@ void initWiFi()
   Serial.println(WiFi.localIP());
 }
 
-// Initialize SPIFFS
 void initSPIFFS()
 {
   if (!SPIFFS.begin())
@@ -144,8 +142,8 @@ void setup()
   dht.setup(DHTpin, DHTesp::DHT11); // for DHT11 Connect DHT sensor to GPIO 17
   // dht.setup(DHTpin, DHTesp::DHT22); //for DHT22 Connect DHT sensor to GPIO 17
 
-  initWiFi();
-  initSPIFFS();
+  initWiFi();         // Initialize WiFi
+  initSPIFFS();       // Initialize SPIFFS
   webServerRootURL();
   ledControlling();
   eventProcessing(); // Set up the event source
