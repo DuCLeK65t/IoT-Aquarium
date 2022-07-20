@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>ESP32 Web Server</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+</head>
+
+<body>
+  <div class="topnav">
+    <h1>IoT Aquarium</h1>
+  </div>
+  <div class="content">
+    <div class="card-grid">
+      <div class="card">
+        <p class="card-title">Temperature Chart</p>
+        <div id="chart-temperature" class="chart-container"></div>
+      </div>
+    </div>
+    <br>
+    <div class="card-grid">
+      <div class="card">
+        <p class="state">LED: <span id="state">%STATE%</span></p>
+        <p><button id="button" class="button">On / Off</button></p>
+      </div>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
