@@ -3,23 +3,29 @@ html {
   display: inline-block;
   text-align: center;
 }
+
 h1 {
   font-size: 1.8rem;
   color: white;
 }
+
 p {
   font-size: 1.4rem;
 }
+
+body {
+  margin: 0;
+}
+
 .topnav {
   overflow: hidden;
   background-color: #0A1128;
 }
-body {
-  margin: 0;
-}
+
 .content {
   padding: 5%;
 }
+
 .card-grid {
   max-width: 1200px;
   margin: 0 auto;
@@ -27,19 +33,23 @@ body {
   grid-gap: 2rem;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
+
 .card {
   background-color: white;
-  box-shadow: 2px 2px 12px 1px rgba(140,140,140,.5);
+  box-shadow: 2px 2px 12px 1px rgba(140, 140, 140, .5);
 }
+
 .card-title {
   font-size: 1.2rem;
   font-weight: bold;
   color: #034078
 }
+
 .chart-container {
   padding-right: 5%;
   padding-left: 5%;
 }
+
 .button {
   display: inline-block;
   background-color: #008CBA;
@@ -48,10 +58,7 @@ body {
   color: white;
   padding: 16px 40px;
   text-decoration: none;
-  font-size: 30px;
+  font-size: 20px;
   margin: 2px;
   cursor: pointer;
-}
-.button2 {
-  background-color: #f44336;
 }
